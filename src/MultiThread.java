@@ -1,5 +1,5 @@
 
-  class Demo extends Thread
+  class Demo1 extends Thread
   {
 
 
@@ -8,7 +8,7 @@
       {
           method1();
           method2();
-//          method3();
+          method3();
       }
       synchronized void method1()
       {
@@ -53,15 +53,15 @@ public class MultiThread
 {
     public static void main(String[] args)
     {
-        Demo d1 = new Demo();
-        Demo d2 = new Demo();
-//       // Demo d3 = new Demo();
+        Demo1 d1 = new Demo1();
+        Demo1 d2 = new Demo1();
+        Demo1 d3 = new Demo1();
 
         d1.start();
-//        for (int i=1;i<=10;i++)
-//        {
-//            System.out.print(i);
-//        }
+        for (int i=1;i<=10;i++)
+        {
+            System.out.print(i);
+        }
         d2.start();
         System.out.println(d1.getName());
         System.out.println(d1.getId());

@@ -15,7 +15,7 @@ public class ListSample
       l1.add("1");
       l1.add("C");
       l1.add(2,"vijay");
-      l1.add(10,"day");
+     // l1.add(10,"day");
         System.out.println(l1);
         for (int i=0;i<l1.size();i++)
         {

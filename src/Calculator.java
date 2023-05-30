@@ -26,25 +26,43 @@ public class Calculator {
         switch (operation1) {
             case "+": {
                 res = number1 + number2;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " = " + getRes());
                 break;
             }
             case "-": {
                 res = number1 - number2;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " = " + getRes());
                 break;
             }
             case "*": {
                 res = number1 * number2;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " = " + getRes());
                 break;
             }
             case "/": {
-                if (number2 == 0) {
-                    System.out.println("Infinity");
-                } else
+
+                try {
                     res = number1 / number2;
+
+                }
+                catch(ArithmeticException e)
+                    {
+                        System.out.println("WE CAN'T DIVIDED BY 0");
+                        System.out.println(e);
+
+                    }
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " = " + getRes());
                 break;
             }
             case "%": {
-                res = number1 % number2;
+                res = (number1*100)/number2;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " = " + getRes());
+                break;
+            }
+            case "^":
+            {
+                res = Math.pow((int)number1,(int)number2);
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " = " + getRes());
                 break;
             }
             default: {
@@ -67,111 +85,268 @@ public class Calculator {
         switch (operation1+operation2) {
             case "+-": {
                 res = number1 + number2 - number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
                 break;
             }
             case "++": {
                 res = number1 + number2 + number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
                 break;
             }
             case "+*": {
                 res = number1 + number2 * number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
                 break;
             }
             case "+%": {
-                res = number1 + number2 % number3;
+                res = number1 + (number2*100) / number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
                 break;
             }
             case "+/": {
                 if(number3==0)
                 {
-                    System.out.println("We can't divided by 0");
+                    System.out.println("WE CAN'T DIVIDED BY 0");
                     break;
                 }
                 else
                 res = number1 + number2 / number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
+                break;
+            }
+            case "+^":
+            {
+                res=number1+Math.pow(number2,number3);
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
                 break;
             }
             case "--": {
                 res = number1 - number2 - number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
                 break;
             }
             case "-+": {
                 res = number1 - number2 + number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
                 break;
             }
             case "-*": {
                 res = number1 - number2 * number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
                 break;
             }
             case "-/": {
+                if(number3==0)
+                {
+                    System.out.println("WE CAN'T DIVIDED BY 0");
+                    break;
+                }
+                else
                 res = number1 - number2 / number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
                 break;
             }
             case "-%": {
-                res = number1 - number2 % number3;
+                res = number1 - (number2*100) / number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
+                break;
+            }
+            case "-^":
+            {
+                res = number1 -Math.pow(number2,number3);
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
                 break;
             }
             case "*+": {
                 res = number1 * number2 + number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
                 break;
             }
             case "*-": {
                 res = number1 * number2 - number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
                 break;
             }
             case "**": {
                 res = number1 * number2 * number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
                 break;
             }
             case "*%": {
-                res = number1 * number2 % number3;
+                res = number1 * (number2*100) / number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
                 break;
             }
             case "*/": {
+                if(number3==0)
+                {
+                    System.out.println("WE CAN'T DIVIDED BY 0");
+
+                    break;
+                }
+                else
                 res = number1 * number2 / number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
                 break;
             }
+            case "*^":
+            {
+                res = number1* Math.pow(number2,number3);
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
 
-           case "/+": {
-                res = number1 / number2 + number3;
                 break;
+            }
+           case "/+": {
+               if(number2==0)
+               {
+                   System.out.println("WE CAN'T DIVIDED BY 0");
+                   break;
+               }
+               else
+                res = number1 / number2 + number3;
+               System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
+               break;
             }
             case "/-": {
-                res = number1 / number2 - number3;
+                if(number2==0) {
+                    System.out.println("WE CAN'T DIVIDED BY 0");
+                }
+                else
+                    res = number1 / number2 - number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
                 break;
             }
             case "/*": {
-                res = number1 / number2 * number3;
+                if(number2==0) {
+                    System.out.println("WE CAN'T DIVIDED BY 0");
+                }
+                else
+                    res = number1 / number2 * number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
                 break;
             }
             case "//": {
+                if(number2==0 || number3==0) {
+                    System.out.println("WE CAN'T DIVIDED BY 0");
+               break;
+                }
+                else
                 res = number1 / number2 / number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
                 break;
             }
             case "/%": {
-                res = number1 / number2 % number3;
+                if(number2==0) {
+                    System.out.println("WE CAN'T DIVIDED BY 0");
+                    break;
+                }
+                else
+                res = number1 / (number2*100) / number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
+                break;
+            }
+            case "/^": {
+
+                res = number1 / Math.pow(number2, number3);
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
                 break;
             }
             case "%+": {
-                res = number1 % number2 + number3;
+                res = (number1*100) /number2 + number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
                 break;
             }
             case "%-": {
-                res = number1 % number2 - number3;
+                res = (number1*100) /number2 - number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
                 break;
             }
             case "%*": {
-                res = number1 % number2 * number3;
+                res = (number1*100) /number2 * number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
                 break;
             }
             case "%/": {
-                res = number1 % number2 / number3;
+                if(number3==0) {
+                    System.out.println("We can't divided by 0");
+                }
+                else
+                res = (number1*100) /number2 / number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
                 break;
             }
             case "%%": {
-                res = number1 % number2 % number3;
+                res = (number1*100) /(number2*100)/(number3 *100);
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
                 break;
             }
+            case "%^": {
+                res = (number1 * 100) / Math.pow(number2, number3);
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
+                break;
+            }
+            case "^+":
+                res = Math.pow(number1,number2)+number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
+                break;
+            case "^-":
+                res= Math.pow(number1,number2)-number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
+                break;
+            case "^*":
+                res= Math.pow(number1,number2)*number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
+                break;
+            case "^%":
+                res =Math.pow(number1,number2) *100/number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
+                break;
+            case "^/":
+                if(number3==0) {
+                    System.out.println("We can't divided by 0");
+                }
+                res= Math.pow(number1,number2)/number3;
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
+                break;
+            case "^^":
+                double temp ;
+                temp= Math.pow(number1,number2);
+                res = Math.pow(temp,number3);
+                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " " + operation2 + " " + number3 + " = " + getRes());
+
+                break;
             default: {
                 System.out.println("Your entered invalid operation");
             }

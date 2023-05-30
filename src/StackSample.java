@@ -6,7 +6,7 @@ public class StackSample
     {
      String s ="Muthu";
      Stack<Character> s1 = new Stack<Character>();
-     for (int i =0 ;i<s.length();i++)
+     for (int i =0 ;i< s.length();i++)
      {
          s1.push(s.charAt(i));
      }

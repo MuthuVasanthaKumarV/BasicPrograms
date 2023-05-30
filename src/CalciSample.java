@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Calcisample
+public class CalciSample
 {
     public static void main(String[] args) {
 
@@ -16,27 +16,22 @@ public class Calcisample
             case 1:
                 System.out.print("Enter the number1 :");
                 double number1 = sc.nextDouble();
-                System.out.print("Enter the operation( +,-,%,/) : ");
+                System.out.print("Enter the operation( +,-,%,/,^) : ");
                 String operation1 = sc.next();
                 System.out.print("Enter the number2 : ");
                 double number2 = sc.nextDouble();
-                Calculator c = new Calculator( number1, operation1 ,number2);
-                System.out.println("Yours Output = " + number1 + " " + operation1 + " " + number2 + " = " + c.getRes());
-
             break;
             case 2:
                 System.out.print("Enter the number1 :");
                 double number3 = sc.nextDouble();
-                System.out.print("Enter the operation ( +,-,%,/) : ");
+                System.out.print("Enter the operation ( +,-,%,/,^) : ");
                 String operation2 = sc.next();
                 System.out.print("Enter the number2 : ");
                 double number4 = sc.nextDouble();
-                System.out.print("Enter the operation ( +,-,%,/) : ");
+                System.out.print("Enter the operation ( +,-,%,/,^) : ");
                 String operation3 = sc.next();
                 System.out.print("Enter the number3 : ");
                 double number5 = sc.nextDouble();
-                Calculator c1 = new Calculator(number3,operation2,number4,operation3,number5);
-                System.out.println("Yours Output = " + number3 + " " + operation2 + " " + number4 + " " + operation3 + " " + number5 + " = " + c1.getRes());
             break;
         }
             if(values==3)
